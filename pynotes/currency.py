@@ -15,15 +15,6 @@ class BankAccountReceivingEnd:
         recievingUser.walletBalance += amount
 
 
-a = BankAccountReceivingEnd('a', 100)
-b = BankAccountReceivingEnd('b', 100)
-a.sendFunds(20, b)
-print(str(a.displayBalance()))
-print(str(b.displayBalance()))
-b.sendFunds(34, a)
-print(str(a.displayBalance()))
-print(str(b.displayBalance()))
-
 
 
     
