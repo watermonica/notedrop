@@ -1,0 +1,32 @@
+import mysql.connector
+
+cnx = mysql.connector.connect(
+                host="localhost",
+                user="root",
+                password="legogk49o"
+)
+
+
+crsr = cnx.cursor()
+crsr.execute("CREATE DATABASE user_information")
+
+cnx = mysql.connector.connect(
+                host="localhost",
+                user="root",
+                password="legogk49o",
+                database="user_information"
+)
+
+user_query = """
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    email VARCHAR(255),
+    password VARCHAR(255),
+    cr_16 VARCHAR(255),
+    sec_code VARCHAR(255),
+    cr_expdate VARCHAR(255)
+)
+"""
+crsr.execute(user_query)
+cnx.commit()
